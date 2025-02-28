@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Manager</title>
+        <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #ff6f61;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+        }
+        main {
+            padding: 20px;
+        }
+        .contact-form {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 400px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+        }
+        input {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            display: block;
+        button {
+            background: #ff6f61;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+              button:hover {
+            background: #e55b50;
+            }
+         .contact-list {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto;
+            width: 90%;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+         }
+         table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background: #ff6f61;
+            color: white;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background: #ffe5e5;
+        }
+
+        tr:hover {
+            background: #ffc2c2;
+            transition: 0.3s;
+        }
+
+        /* Кнопки дій */
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .edit-btn, .delete-btn {
+            border: none;
+            padding: 8px 10px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 14px;
+        }
+
+        .edit-btn {
+            background: #ffcc00;
+            color: white;
+        }
+
+        .delete-btn {
+            background: #ff4d4d;
+            color: white;
+        }
+
+        .edit-btn:hover {
+            background: #e6b800;
+        }
+
+        .delete-btn:hover {
+            background: #e60000;
+
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Contact Manager</h1>
+</header>
+<main>
+    <section class="contact-form">
+        <h2>Add New Contact</h2>
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="tel" id="phone" placeholder="Phone" required>
+            <button type="submit">Add Contact</button>
+        </form>
+    </section>
+    <section class="contact-list">
+        <h2>Your Contacts</h2>
+        <ul id="contacts"></ul>
+    </section>
+    <table id="contactsTable">
+        <thead>
+        <tr>
+            <th>Ім'я</th>
+            <th>Телефон</th>
+            <th>Email</th>
+            <th>Дії</th>
+        </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+</main>
+<script src="index.js"></script>
+</body>
+</html>
